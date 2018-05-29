@@ -3,6 +3,7 @@
 # requisitos
 
 npm
+
 mongodb ( en localhost tiene que estar arrancado para que la aplicacion funcione )
 
 # instalacion
@@ -19,7 +20,7 @@ tambien hay que hacerlo ( `npm install` i) en `angular-src`.
 ng build
 ```
 
-para ejecutarlo :
+# ejecucion
 
 `npm start` 
 
