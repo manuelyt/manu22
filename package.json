@@ -1,0 +1,25 @@
+{
+  "name": "atlas-manu",
+  "version": "1.0.0",
+  "description": "prueba de manu",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "~4.15.3",
+    "mongoose": "~4.11.0",
+    "cors": "~2.8.3",
+    "body-parser": "*"
+  },
+  "keywords": [
+    "MEAN",
+    "stack",
+    "Express.js",
+    "MongoDB",
+    "Angular",
+    "MEAN"
+  ],
+  "author": "manu",
+  "license": "ISC"
+}
