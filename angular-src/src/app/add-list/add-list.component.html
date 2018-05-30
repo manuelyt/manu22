@@ -6,80 +6,52 @@
  
  <!--
  -->
- <input [(ngModel)]="tag" [tagValidator]="existingTags" #dir="ngModel" />
-  <div> Valid: {{ dir.valid }} </div>
-  <div> Existing tags: {{ existingTags | json }} </div>
  
- 
-      <div class="form-group col-md-5">
-        <label for="nombrec"><h4>Nombre completo</h4></label>
-        <input type="text" id="nombrec" class="form-control" [(ngModel)]="newList.nombrec" name="nombrecomp" required minlength="5" maxlength="30" [(ngModel)]="model.nombrec"  #nombrec="ngModel">
-      <div *ngIf="nombrec.errors && (nombrec.dirty || nombrec.touched)" class="alert alert-danger">
-        <div [hidden]="!nombrec.errors.required">
-          ¡El campo del nombre completo es obligatorio!
-        </div>
-        <div [hidden]="!nombrec.errors.minlength">
-          nombrec be at least 5 characters long.
-        </div>
-        <div [hidden]="!nombrec.errors.maxlength">
-          nombrec be more than 30 characters long.
-        </div>
+      <div>
+        Nombre completo<br>        <input type="text" id="nombrec" class="form-control" [(ngModel)]="newList.nombrec" name="nombrecomp" required minlength="5" maxlength="30" [(ngModel)]="model.nombrec"  #nombrec="ngModel">
       </div>
+ 	
+      <div>
+         Email<br>        <input type="text" class="form-control" [(ngModel)]="newList.email" name="email" required>
+      </div>
+ 
+ 	
+      <div>
+        DNI<br>        <input type="text" class="form-control" [(ngModel)]="newList.dni" name="dni" required>
+      </div>
+ 
+ 	
+      <div>
+        Direccion<br>        <input type="text" class="form-control" [(ngModel)]="newList.direccion" name="direccion" required>
+      </div>
+ 
+ 	
+      <div>
+        Codigo postal<br>        <input type="text" class="form-control" [(ngModel)]="newList.codigop" name="codigop" required>
       </div>
  
  
  	
-      <button type="submit" class="push-button-down btn btn-success">Comprobar disponibilidad</button>
- 	
-      <div class="form-group col-md-5">
-        <label for="email"><h4>Email</h4></label>
-        <input type="text" class="form-control" [(ngModel)]="newList.email" name="email" required>
-      </div>
- 
- 	
-      <div class="form-group col-md-5">
-        <label for="dni"><h4>DNI</h4></label>
-        <input type="text" class="form-control" [(ngModel)]="newList.dni" name="dni" required>
-      </div>
- 
- 	
-      <div class="form-group col-md-5">
-        <label for="direccion"><h4>Direccion</h4></label>
-        <input type="text" class="form-control" [(ngModel)]="newList.direccion" name="direccion" required>
-      </div>
- 
- 	
-      <div class="form-group col-md-5">
-        <label for="codigop"><h4>Codigo postal</h4></label>
-        <input type="text" class="form-control" [(ngModel)]="newList.codigop" name="codigop" required>
+      <div>
+        Ciudad<br>        <input type="text" class="form-control" [(ngModel)]="newList.ciudad" name="ciudad" required>
       </div>
  
  
  	
-      <div class="form-group col-md-5">
-        <label for="ciudad"><h4>Ciudad</h4></label>
-        <input type="text" class="form-control" [(ngModel)]="newList.ciudad" name="ciudad" required>
+      <div>
+        Pais<br>        <input type="text" class="form-control" [(ngModel)]="newList.pais" name="pais" required>
       </div>
  
  
  	
-      <div class="form-group col-md-5">
-        <label for="pais"><h4>Pais</h4></label>
-        <input type="text" class="form-control" [(ngModel)]="newList.pais" name="pais" required>
-      </div>
- 
- 
- 	
-      <div class="form-group col-md-5">
-        <label for="observaciones"><h4>Observaciones</h4></label>
-        <input type="text" class="form-control" [(ngModel)]="newList.observaciones" name="observaciones" required>
+      <div>
+        Observaciones<br>        <input type="text" class="form-control" [(ngModel)]="newList.observaciones" name="observaciones" required>
       </div>
  
  
  
-      <div class="form-group col-md-2">
-        <label for="subscrito"><h4>Subscrito</h4></label>
-        <select class="form-control" name="sub" [(ngModel)]="newList.subscrito" >
+      <div>
+        Subscrito<br>        <select class="form-control" name="sub" [(ngModel)]="newList.subscrito" >
             
           <option value="si">Si</option>
           <option value="no">No</option>
@@ -90,9 +62,8 @@
       
       
  
-      <div class="form-group col-md-2">
-        <label for="captacion"><h4>Captacion</h4></label>
-        <select class="form-control" name="cap" [(ngModel)]="newList.captacion" >
+      <div>
+        Captacion<br>        <select class="form-control" name="cap" [(ngModel)]="newList.captacion" >
             
           <option value="telefonica">Telefonica</option>
           <option value="web">web</option>
@@ -103,12 +74,7 @@
  
  
  
- 
- 
- 
- 
- 	
-      <button type="submit" class="push-button-down btn btn-success">Submit</button>
+      <button type="submit" class="push-button-down btn btn-success"  style="width:25%;">Submit</button>
  	
     </form>
 </div>
