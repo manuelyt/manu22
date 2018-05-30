@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { List } from '../models/List';
 import { ListService } from '../services/list.service';
+import { TagsValidator } from './tags-validator/tags-validator.component';
 
 @Component({
   selector: 'app-add-list',
@@ -9,7 +10,12 @@ import { ListService } from '../services/list.service';
   
   
   
-  templateUrl: './add-list.component.html',
+  //templateUrl: './add-list.component.html',
+  templateUrl: `
+  <input [(ngModel)]="tag" [tagValidator]="existingTags" #dir="ngModel" />
+  <div> Valid: {{ dir.valid }} </div>
+  <div> Existing tags: {{ existingTags | json }} </div>
+  `,
   
   
   

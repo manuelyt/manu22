@@ -14,18 +14,7 @@
 
       <div class="form-group col-md-5">
         <label for="nombrec"><h4>Nombre completo</h4></label>
-        <input type="text" id="nombrec" class="form-control" [(ngModel)]="newList.nombrec" name="nombrecomp" required minlength="5" maxlength="30" [(ngModel)]="model.nombrec"  #nombrec="ngModel">
-      <div *ngIf="nombrec.errors && (nombrec.dirty || nombrec.touched)" class="alert alert-danger">
-        <div [hidden]="!nombrec.errors.required">
-          ¡El campo del nombre completo es obligatorio!
-        </div>
-        <div [hidden]="!nombrec.errors.minlength">
-          nombrec be at least 5 characters long.
-        </div>
-        <div [hidden]="!nombrec.errors.maxlength">
-          nombrec be more than 30 characters long.
-        </div>
-      </div>
+        <input type="text" class="form-control" [(ngModel)]="newList.nombrec" name="nombrecomp" required>
       </div>
  
  	
